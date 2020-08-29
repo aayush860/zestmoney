@@ -4,7 +4,6 @@ import os
 class configure_dirvers:
     def __init__(self):
         BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-        print(BASE_DIR+'/base/chromedriver')
         self.chrome_driver = webdriver.Chrome(BASE_DIR+'/base/chromedriver')
 
     def config_driver(self):
