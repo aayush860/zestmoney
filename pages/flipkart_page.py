@@ -25,7 +25,7 @@ class flipkart_class(drivers.configure_dirvers):
         print(price)
         return price
 
-    def flipkart_short_cut(self):
+    def flipkart_short_cut(self) -> object:
         wait = WebDriverWait(self.chrome_driver, 10)
         self.chrome_driver.get(flipkartlocators.short_cut_link)
         table_data = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, flipkartlocators.data_table)))

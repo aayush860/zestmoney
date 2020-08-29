@@ -1,11 +1,11 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-
+import os
 
 class configure_dirvers:
     def __init__(self):
-        self.chrome_driver = webdriver.Chrome("/Users/aayushbhargava/Downloads/chromedriver")
+        BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+        print(BASE_DIR+'/base/chromedriver')
+        self.chrome_driver = webdriver.Chrome(BASE_DIR+'/base/chromedriver')
 
     def config_driver(self):
         self.chrome_driver.implicitly_wait(15)
